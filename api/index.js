@@ -9,4 +9,8 @@ app.use(cors())
 
 app.use("/", userRoutes)
 
-app.listen(8800)
+// app.listen(8800)
+const port = process.env.PORT || 8800;
+
+
+app.listen(port, () => console.log(`listening on ${port}`));
